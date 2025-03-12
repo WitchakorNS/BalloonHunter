@@ -294,7 +294,7 @@ public class BalloonShooter extends JPanel implements ActionListener, MouseListe
                     popups.add(new PopupScore(mx, my, (int)addScore, Color.GREEN));
                     comboTimerPopup = new ComboTimerPopup(mx, my - 20, COMBO_TIMEOUT / 1000);
 
-                    coin += 200;
+                    coin += 2;
                     GamePreferences.saveCoin(coin);
                     new Thread(() -> Sound.playSound("C:\\Users\\ASUS\\Downloads\\GAME (1)\\GAME\\AllSound\\pop.wav")).start();
                 } 
