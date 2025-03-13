@@ -122,7 +122,7 @@ public class BalloonShooter extends JPanel implements ActionListener, MouseListe
         g.drawString("Level: " + level, 10, 20);
         g.drawString("Score: " + score, 10, 40);
         g.drawString("Time Left: " + (gameTime - getElapsedTime()) + "s", 10, 60);
-        g.drawString("Gun Color: " + playerColor, 10, 80);
+        g.drawString("Color Target: " + playerColor, 10, 80);
         g.drawString("Score Target: " + getLevelScore(), 10, 100);
         
         this.coin = GamePreferences.loadCoin();
@@ -160,7 +160,6 @@ public class BalloonShooter extends JPanel implements ActionListener, MouseListe
             continuous_shot = false;
         }
 
-        //System.out.println("Elapsed Time: " + getElapsedTime() + " Game Time: " + gameTime + " Score: " + score);
         if(score < 0) {
             timer.stop();
             JOptionPane.showMessageDialog(this, "Game Over!!!");
@@ -224,10 +223,10 @@ public class BalloonShooter extends JPanel implements ActionListener, MouseListe
     private int getLevelScore() {
         switch (level) {
             case 1: return 5000;
-            case 2: return 15000;
-            case 3: return 30000;
-            case 4: return 60000;
-            case 5: return 100000; // ผมทำไว้เยอะ ๆ แต่ปรับได้นะคับ
+            case 2: return 10000;
+            case 3: return 20000;
+            case 4: return 30000;
+            case 5: return 50000;
             default: return 0;
         }
     }
